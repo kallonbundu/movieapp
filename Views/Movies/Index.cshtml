@@ -1,0 +1,69 @@
+@model MovieApp.Controllers.MovieGenreViewModel
+
+@{
+    ViewData["Title"] = "Bundu's Movies Collection";
+}
+
+<h1>Bundu's Movies Collection</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add to Bundu's Movies</a>
+</p>
+
+<form asp-action="Index" method="get">
+    <div class="form-group">
+        <label for="movieGenre">Genre</label>
+        <select id="movieGenre" asp-for="MovieGenre" asp-items="Model?.Genres" class="form-control">
+            <option value="">All</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="searchString">Movie Title</label>
+        <input type="text" asp-for="SearchString" id="searchString" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="minYear">Release Year or Later</label>
+        <input type="number" asp-for="MinYear" id="minYear" class="form-control" placeholder="Enter year" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+@if (Model?.Movies.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Release Date</th>
+                <th>Genre</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model!.Movies)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => movie.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => movie.ReleaseDate)</td>
+                    <td>@Html.DisplayFor(modelItem => movie.Genre)</td>
+                    <td>@Html.DisplayFor(modelItem => movie.Price)</td>
+                    <td>@Html.DisplayFor(modelItem => movie.Rating)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@movie.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="Details" asp-route-id="@movie.Id" class="btn btn-sm btn-info">Details</a>
+                        <a asp-action="Delete" asp-route-id="@movie.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No movies found.</p>
+}

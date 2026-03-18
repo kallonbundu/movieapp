@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home - Bundu's Movies";
+}
+
+<div class="hero-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; border-radius: 10px; margin-bottom: 40px;">
+    <div class="text-center">
+        <h1 class="display-3" style="font-weight: bold; margin-bottom: 20px;">🎬 Bundu's Movies</h1>
+        <p class="lead" style="font-size: 1.5rem; margin-bottom: 30px;">Your Personal Bundu's Movies Collection</p>
+        <p class="lead" style="font-size: 1.1rem; margin-bottom: 30px;">Discover, manage, and explore your favorite movies in one place</p>
+        <a href="@Url.Action("Index", "Movies")" class="btn btn-light btn-lg" style="font-weight: bold; padding: 12px 40px; font-size: 1.1rem;">
+            View Bundu's Movies Collection
+        </a>
+    </div>
+</div>
+
+<div class="container" style="margin-bottom: 60px;">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card" style="height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="font-size: 2rem; margin-bottom: 15px;">🔍</h5>
+                    <h5 class="card-title">Search & Filter</h5>
+                    <p class="card-text">Easily search movies by title, filter by genre, and discover films by release year.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="font-size: 2rem; margin-bottom: 15px;">⭐</h5>
+                    <h5 class="card-title">Manage Your Collection</h5>
+                    <p class="card-text">Add new movies, edit details, and remove movies from your personal collection.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="font-size: 2rem; margin-bottom: 15px;">📋</h5>
+                    <h5 class="card-title">View Details</h5>
+                    <p class="card-text">Get quick access to movie information including title, genre, price, and rating.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #f8f9fa; padding: 40px; border-radius: 10px; text-align: center;">
+    <h3 style="margin-bottom: 20px;">Ready to explore?</h3>
+    <p style="margin-bottom: 20px; font-size: 1.1rem;">Click below to start managing your movie collection</p>
+    <a href="@Url.Action("Index", "Movies")" class="btn btn-primary btn-lg" style="font-weight: bold;">
+        Get Started →
+    </a>
+</div>
