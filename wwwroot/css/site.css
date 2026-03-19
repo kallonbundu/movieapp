@@ -1,4 +1,11 @@
 /* ===========================
+   FORM ELEMENT PADDING (Assignment Requirement)
+   =========================== */
+input, select, textarea {
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+}
+/* ===========================
    GLOBAL STYLES
    =========================== */
 html {

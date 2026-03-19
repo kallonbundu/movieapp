@@ -55,6 +55,31 @@ public static class MovieInitializer
                 Genre = "Drama",
                 Price = 12.99m,
                 Rating = "PG-13"
+            },
+            // JayCode's favorite movies
+            new Movie
+            {
+                Title = "Interstellar",
+                ReleaseDate = new DateTime(2014, 11, 7),
+                Genre = "Sci-Fi",
+                Price = 15.99m,
+                Rating = "PG-13"
+            },
+            new Movie
+            {
+                Title = "The Matrix",
+                ReleaseDate = new DateTime(1999, 3, 31),
+                Genre = "Action",
+                Price = 11.99m,
+                Rating = "R"
+            },
+            new Movie
+            {
+                Title = "Spirited Away",
+                ReleaseDate = new DateTime(2001, 7, 20),
+                Genre = "Animation",
+                Price = 10.99m,
+                Rating = "PG"
             }
         };
 
